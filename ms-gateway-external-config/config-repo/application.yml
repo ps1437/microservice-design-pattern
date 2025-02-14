@@ -8,3 +8,4 @@ eureka:
 account:
  service:
    name: 'Praveen' 
+
