@@ -8,13 +8,21 @@ spring:
     gateway:
       routes:
         - id: account-service
-          uri: http://localhost:8080
+          uri: lb://ACCOUNT-SERVICE  # Load balancing via Eureka
           predicates:
             - Path=/accounts/**
         - id: customer-service
-          uri: http://localhost:8081
+          uri: lb://CUSTOMER-SERVICE # Load balancing via Eureka
           predicates:
             - Path=/customers/**
+
+
+eureka:
+  client:
+    register-with-eureka: true
+    fetch-registry: true  # Fetch service list from Eureka
+    service-url:
+      defaultZone: http://localhost:8761/eureka/  # Eureka Server URL
 
 springdoc:
   swagger-ui:
@@ -23,3 +31,9 @@ springdoc:
         url: /account/v3/api-docs
       - name: Customer Service
         url: /customer/v3/api-docs
+
+management:
+  endpoints:
+    web:
+      exposure:
+        include: "*"
