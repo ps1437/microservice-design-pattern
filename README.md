@@ -1,53 +1,71 @@
 # Microservice Design Patterns
 
-This repository provides implementations and examples of various microservice design patterns using Java and Spring Boot. It serves as a reference for building scalable, maintainable, and well-structured microservices.
+This repository demonstrates various **microservice design patterns** using **Spring Boot, Spring Cloud, and Java**. It covers essential architectural patterns such as **CQRS, API Gateway, Service Registry, Config Server, and more**.
 
 ## 📂 Project Structure
 
-- **`cqrs-ms-design`** - Implements CQRS (Command Query Responsibility Segregation) with Axon Server.
-- **`ms-custom-registry`** - Custom service registry implementation for microservices.
-- **`ms-gateway-external-config`** - Contains a microservices banking service with service registry, API Gateway, and centralized configuration.
-- **`ms-java-design`** - Java-based implementation of various microservice design patterns.
+```
+microservice-design-pattern/
+│── banking-microservices/   # Banking-related microservices architecture
+│── cqrs-ms-design/         # CQRS pattern with command & query separation
+│── ms-config-server/       # Centralized configuration using Spring Cloud Config
+│── ms-custom-registry/     # Custom-built service registry
+│── ms-gateway/            # API Gateway for routing & security
+│── ms-java-design/        # Common Java design patterns for microservices
+│── ms-registry-server/    # Eureka-based service registry
+│── .gitignore             # Updated to exclude unnecessary files
+│── README.md              # Documentation
+```
 
-## 🚀 Technologies Used
+## 🚀 Features
 
-- **Java 17**  
-- **Spring Boot 3.x**  
-- **Axon Server (CQRS Implementation)**  
-- **Spring Cloud Gateway**  
-- **Spring Cloud Config Server**  
-- **Eureka / Custom Service Registry**  
-- **Docker** (if applicable)  
+- **CQRS (Command Query Responsibility Segregation)**
+- **Spring Cloud Gateway as an API Gateway**
+- **Spring Cloud Config for Centralized Configuration**
+- **Eureka Service Registry for Discovery**
 
-## 📌 Getting Started
+## 🛠️ Setup & Usage
 
-1. Clone the repository:  
+### Prerequisites
+
+- **Java 17+**
+- **Maven**
+- **Docker** *(will be added later)*
+
+### Running the Services
+
+1. Clone the repository:
    ```sh
    git clone https://github.com/ps1437/microservice-design-pattern.git
    cd microservice-design-pattern
    ```
 
-2. Build the project:  
+2. Build the projects:
    ```sh
    mvn clean install
    ```
 
-3. Run individual services as needed:  
+3. Run individual microservices:
    ```sh
-   cd cqrs-ms-design  
-   mvn spring-boot:run  
+   mvn spring-boot:run
    ```
 
-## 🛠️ Features & Design Patterns
+4. Use **Docker Compose** (if available) to spin up services:
+   ```sh
+   docker-compose up -d
+   ```
 
-- **CQRS (Command Query Responsibility Segregation)**  
-- **API Gateway with centralized configuration**  
-- **Custom Service Registry**  
-- **Microservice Banking Service Implementation**  
-- **Microservice Communication Patterns**  
+## 🔥 Recent Updates
 
-## 📜 Contributing
+- **Folder Restructure**: Enhanced project organization.
+- **Updated `.gitignore`**: Removed unnecessary `target/` and `.mvn/` folders.
+- **Optimized Microservices Implementations**.
 
-Feel free to contribute by submitting issues or pull requests.
+## 🏗️ Contribution
+
+Feel free to **fork, clone, and submit PRs** if you'd like to enhance the project! 🚀
 
 
+---
+
+Happy coding! 💻🚀

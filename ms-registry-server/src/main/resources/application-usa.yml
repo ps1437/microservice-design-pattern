@@ -1,16 +1,22 @@
 server:
   port : 8762
 
+
+spring:
+  application:
+    name : Eureka-USA
+
+
 eureka:
   instance:
-    hostname: eureka-zone2
+    hostname: eureka-usa
   client:
-    registerWithEureka: false
+    registerWithEureka: true
     fetchRegistry: true
     serviceUrl:
       defaultZone: http://localhost:8761/eureka/
   server:
     evictionIntervalTimerInMs: 50000
-  datacenter: onepieceDataCenter
+  datacenter: DS-USA
   availabilityZones:
-    onepieceDataCenter: zone1,zone2
+    DS-USA: usa

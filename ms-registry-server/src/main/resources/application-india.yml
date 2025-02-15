@@ -1,16 +1,20 @@
 server:
   port : 8761
 
+spring:
+  application:
+    name : Eureka-INDA
+
 eureka:
   instance:
-    hostname: eureka-zone1
+    hostname: eureka-india
   client:
-    registerWithEureka: false
+    registerWithEureka: true
     fetchRegistry: true
     serviceUrl:
       defaultZone: http://localhost:8762/eureka/
   server:
     evictionIntervalTimerInMs: 50000
-  datacenter: onepieceDataCenter
+  datacenter: DS-INDIA
   availabilityZones:
-    onepieceDataCenter: zone1,zone2
+    DS-INDIA: india
