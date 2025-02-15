@@ -1,4 +1,4 @@
-package com.syshco.ms.accounts.domain;
+package com.syscho.ms.accounts.domain;
 
 import org.springframework.data.jpa.repository.JpaRepository;
 

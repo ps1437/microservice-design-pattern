@@ -1,22 +1,6 @@
-server:
-  port: 8085
-
 spring:
   application:
-    name: api-gateway
-  cloud:
-    gateway:
-      routes:
-        - id: account-service
-          uri: lb://ACCOUNT-SERVICE  # Load balancing via Eureka
-          predicates:
-            - Path=/accounts/**
-        - id: customer-service
-          uri: lb://CUSTOMER-SERVICE # Load balancing via Eureka
-          predicates:
-            - Path=/customers/**
-
-
+    name: account-service
 eureka:
   client:
     registerWithEureka: true
@@ -38,18 +22,4 @@ eureka:
     leaseRenewalIntervalInSeconds: 10  # Heartbeat interval
     leaseExpirationDurationInSeconds: 30  # Timeout before removal
     metadataMap:
-      zone: zone1  # Zone-awareness
-
-springdoc:
-  swagger-ui:
-    urls:
-      - name: Account Service
-        url: /account/v3/api-docs
-      - name: Customer Service
-        url: /customer/v3/api-docs
-
-management:
-  endpoints:
-    web:
-      exposure:
-        include: "*"
+      zone: zone2  # Zone-awareness

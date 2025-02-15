@@ -1,7 +1,7 @@
-package com.syshco.ms.accounts.service;
+package com.syscho.ms.accounts.service;
 
-import com.syshco.ms.accounts.domain.Account;
-import com.syshco.ms.accounts.domain.AccountRepository;
+import com.syscho.ms.accounts.domain.Account;
+import com.syscho.ms.accounts.domain.AccountRepository;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Service;
 

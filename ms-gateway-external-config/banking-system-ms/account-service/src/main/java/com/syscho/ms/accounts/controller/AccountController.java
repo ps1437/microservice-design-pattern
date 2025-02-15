@@ -1,9 +1,9 @@
-package com.syshco.ms.accounts.web.controller;
+package com.syscho.ms.accounts.controller;
 
 import com.syscho.ms.commons.model.AccountCreateRequest;
 import com.syscho.ms.commons.model.AccountResponse;
-import com.syshco.ms.accounts.domain.Account;
-import com.syshco.ms.accounts.service.AccountService;
+import com.syscho.ms.accounts.domain.Account;
+import com.syscho.ms.accounts.service.AccountService;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.web.bind.annotation.*;
 
