@@ -1,4 +1,4 @@
-package com.syshco.ms.accounts.domain;
+package com.syscho.ms.accounts.domain;
 
 import com.fasterxml.jackson.annotation.JsonIgnore;
 import jakarta.persistence.*;

@@ -1,4 +1,4 @@
-package com.syshco.ms.accounts;
+package com.syscho.ms.accounts;
 
 import org.springframework.boot.SpringApplication;
 import org.springframework.boot.autoconfigure.SpringBootApplication;
